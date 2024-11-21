@@ -2,8 +2,10 @@ const express = require('express');
 const mongoose = require('mongoose')
 const articleRouter = require('./routes/articles')
 const app = express();
+const url = "mongodb://0.0.0.0:27017";
 
-mongoose.connect('mongodb://localhost/blog', { 
+
+mongoose.connect(url, { 
     useNewUrlParser: true, useUnifiedTopology: true
 })
 //view enginec
